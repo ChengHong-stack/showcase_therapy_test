@@ -8,6 +8,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,18 +54,40 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
           </a>
         </nav>
 
-        {/* Mobile menu button placeholder */}
+        {/* Mobile menu button */}
         <div className="flex items-center gap-4 md:hidden">
           <button onClick={toggleLanguage} className={`${scrolled ? 'text-olive-800' : 'text-olive-800 lg:text-white'} font-bold`}>
             {language === 'en' ? '中文' : 'EN'}
           </button>
-          <button className={`${scrolled ? 'text-olive-800' : 'text-olive-800 lg:text-white'}`}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className={`${scrolled ? 'text-olive-800' : 'text-olive-800 lg:text-white'}`}
+          >
+            {mobileMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-olive-100 shadow-xl py-8 px-6 flex flex-col gap-6 animate-fade-in-down">
+          <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-widest text-olive-800 hover:text-accent-orange transition-colors text-center">{t.home}</a>
+          <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-widest text-olive-800 hover:text-accent-orange transition-colors text-center">{t.about}</a>
+          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-widest text-olive-800 hover:text-accent-orange transition-colors text-center">{t.services}</a>
+          <a href="#reviews" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold uppercase tracking-widest text-olive-800 hover:text-accent-orange transition-colors text-center">{t.reviews}</a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="px-6 py-3 border border-olive-800 rounded-sm text-sm font-bold uppercase tracking-widest text-olive-800 hover:bg-olive-800 hover:text-white transition-colors text-center w-full max-w-xs mx-auto">
+            {t.book}
+          </a>
+        </div>
+      )}
     </header>
   );
 };
