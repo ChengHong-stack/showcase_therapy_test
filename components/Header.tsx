@@ -43,9 +43,6 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
             onClick={toggleLanguage}
             className={`text-sm font-bold uppercase tracking-widest hover:text-accent-orange transition-colors flex items-center gap-1 ${scrolled ? 'text-olive-700' : 'text-olive-800 lg:text-white/90'}`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S12 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S12 3 12 3m0 12h.008v.008H12V15zm0 3h.008v.008H12V18z" />
-            </svg>
             {language === 'en' ? '中文' : 'EN'}
           </button>
 
