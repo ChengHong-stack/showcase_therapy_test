@@ -1,5 +1,6 @@
 import React from 'react';
 import { Language } from '../types';
+import jovenaImg from '../img/profile/Jovena_Lim_Photo1.jpg';
 
 interface ProfileSectionProps {
   language: Language;
@@ -32,7 +33,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ language }) => {
               <div className="absolute top-8 right-8 inset-0 bg-accent-orange rounded-[2rem] transform translate-x-4 translate-y-4 z-0 opacity-80"></div>
 
               <img
-                src="../img/profile/Jovena_Lim_Photo1.jpg"
+                src={jovenaImg}
                 alt="Jovena - Counsellor"
                 className="relative z-10 w-full h-full object-cover rounded-[2rem]"
               />

@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
+import mainImg from '../img/main.jpg';
+import coupleImg from '../img/couple consel.jpeg';
+import corporateImg from '../img/corpo counsel.jpeg';
+import personalImg from '../img/indiv_consel.jpeg';
+import emotionalImg from '../img/emotional management.jpg';
 
 interface HeroProps {
   language: Language;
@@ -7,11 +12,11 @@ interface HeroProps {
 
 
 const IMAGES = {
-  default: "../img/main.jpg", 
-  couple: "../img/couple consel.jpeg", 
-  corporate: "../img/corpo counsel.jpeg", 
-  personal: "../img/indiv_consel.jpeg",
-  emotional: "../img/emotional management.jpg" 
+  default: mainImg, 
+  couple: coupleImg, 
+  corporate: corporateImg, 
+  personal: personalImg,
+  emotional: emotionalImg 
 };
 
 const Hero: React.FC<HeroProps> = ({ language }) => {
