@@ -29,8 +29,12 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4 text-olive-800' : 'bg-transparent py-6 text-olive-800 lg:text-white'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="flex flex-col">
-           <span className="text-3xl font-serif font-bold tracking-tight leading-none">Relive</span>
+        <a href="#" className="flex items-end gap-3 group">
+           <span className={`text-4xl font-serif font-medium tracking-tight leading-none ${scrolled ? 'text-olive-600' : 'text-olive-600 lg:text-olive-50'}`}>Relive</span>
+           <div className={`flex flex-col items-start justify-center leading-tight opacity-90 ${scrolled ? 'text-olive-600' : 'text-olive-600 lg:text-olive-50'}`}>
+             <span className="text-[0.65rem] font-sans font-bold tracking-[0.2em] uppercase">Relationship</span>
+             <span className="text-[0.65rem] font-sans font-bold tracking-[0.2em] uppercase">Counselling</span>
+           </div>
         </a>
         
         <nav className="hidden md:flex items-center gap-8">

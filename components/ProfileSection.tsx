@@ -36,6 +36,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ language }) => {
                 src={jovenaImg}
                 alt="Jovena - Counsellor"
                 className="relative z-10 w-full h-full object-cover rounded-[2rem]"
+                loading="lazy"
               />
             </div>
           </div>

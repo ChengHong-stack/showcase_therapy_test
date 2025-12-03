@@ -7,11 +7,13 @@ interface ReviewsSectionProps {
 
 const ReviewsSection: React.FC<ReviewsSectionProps> = ({ language }) => {
   useEffect(() => {
-    const scriptId = "EmbedSocialHashtagScript";
+    const scriptId = "SociableKitScript";
     if (!document.getElementById(scriptId)) {
        const script = document.createElement("script");
        script.id = scriptId;
-       script.src = "https://embedsocial.com/cdn/ht.js";
+       script.src = "https://widgets.sociablekit.com/google-reviews/widget.js";
+       script.async = true;
+       script.defer = true;
        document.head.appendChild(script);
     }
   }, []);
@@ -34,12 +36,7 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ language }) => {
           </p>
         </div>
 
-        <div className="embedsocial-hashtag" data-ref="23173c50da2e8060397d1d084af78acc227fa29d">
-            <a className="feed-powered-by-es feed-powered-by-es-slider-img es-widget-branding" href="https://embedsocial.com/" target="_blank" title="Widget by EmbedSocial">
-                <img src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial" />
-                <div className="es-widget-branding-text">Widget by EmbedSocial</div>
-            </a>
-        </div>
+        <div className="sk-ww-google-reviews" data-embed-id="25629147"></div>
       </div>
     </section>
   );
