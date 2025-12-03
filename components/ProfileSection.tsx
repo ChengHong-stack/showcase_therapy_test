@@ -72,7 +72,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ language }) => {
                 <div>
                   <p className="text-xs text-stone-500 font-bold uppercase tracking-wider mb-1">{t.direct}</p>
                   <a href="tel:+14155550123" className="text-lg font-serif font-bold text-olive-900 hover:text-accent-orange transition-colors">
-                    (415) 555-0123
+                    +(60)12-5118278
                   </a>
                 </div>
               </div>
