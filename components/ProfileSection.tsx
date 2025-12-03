@@ -1,6 +1,6 @@
 import React from 'react';
 import { Language } from '../types';
-import jovenaImg from '../img/profile/Jovena_Lim_Photo1.jpg';
+import jovenaImg from '../assets/jovena_profile.jpg';
 
 interface ProfileSectionProps {
   language: Language;

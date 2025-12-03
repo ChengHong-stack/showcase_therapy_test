@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
-import mainImg from '../img/main.jpg';
-import coupleImg from '../img/couple consel.jpeg';
-import corporateImg from '../img/corpo counsel.jpeg';
-import personalImg from '../img/indiv_consel.jpeg';
-import emotionalImg from '../img/emotional management.jpg';
+import mainImg from '../assets/main.jpg';
+import coupleImg from '../assets/couple_counsel.jpeg';
+import corporateImg from '../assets/corporate_counsel.jpeg';
+import personalImg from '../assets/individual_counsel.jpeg';
+import emotionalImg from '../assets/emotional_management.jpg';
 
 interface HeroProps {
   language: Language;
