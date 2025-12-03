@@ -43,8 +43,8 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         </div>
         <div>
           <h4 className="text-lg font-semibold text-white mb-4">{t.contact}</h4>
-          <p className="text-olive-300 text-sm mb-2">123 Wellness Blvd, Suite 400</p>
-          <p className="text-olive-300 text-sm mb-2">San Francisco, CA 94103</p>
+          <p className="text-olive-300 text-sm mb-2">UNIT A-02-06 Level 2, AURORA PLACE, 1, Persiaran Jalil 1l 2</p>
+          <p className="text-olive-300 text-sm mb-2">Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
           <p className="text-olive-300 text-sm">hello@relivecounselling.com</p>
         </div>
         <div>
